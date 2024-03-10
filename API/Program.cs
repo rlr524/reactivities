@@ -27,4 +27,20 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+// The using keyword will allow the scope to be destroyed after this code is executed.
+using var scope = app.Services.CreateScope();
+var services = scope.ServiceProvider;
+try
+{
+    var context = services.GetRequiredService<DataContext>();
+    await context.Database.MigrateAsync();
+    await Seed.SeedData(context);
+}
+catch (Exception e)
+{
+    Console.WriteLine(e);
+    var logger = services.GetRequiredService<ILogger<Program>>();
+    logger.LogError(e, "An error occurred during migration");
+}
+
 app.Run();
