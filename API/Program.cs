@@ -1,12 +1,19 @@
-var builder = WebApplication.CreateBuilder(args);
+namespace API;
+internal class Program
+{
+    public static void Main(string[] args)
+    {
+        var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+        // Add services to the container.
 
-builder.Services.AddControllers();
+        builder.Services.AddControllers();
 
-var app = builder.Build();
+        var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-app.MapControllers();
+        // Configure the HTTP request pipeline.
+        app.MapControllers();
 
-app.Run();
+        app.Run();
+    }
+}
