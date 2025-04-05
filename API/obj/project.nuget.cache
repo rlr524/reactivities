@@ -1,11 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GLXWylctBlA=",
+  "dgSpecHash": "nhDTu3W/LiM=",
   "success": true,
   "projectFilePath": "/Users/rob/Developer/DotNetProjects/reactivities/API/API.csproj",
-  "expectedPackageFiles": [
-    "/Users/rob/.nuget/packages/microsoft.aspnetcore.openapi/9.0.3/microsoft.aspnetcore.openapi.9.0.3.nupkg.sha512",
-    "/Users/rob/.nuget/packages/microsoft.openapi/1.6.17/microsoft.openapi.1.6.17.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }
